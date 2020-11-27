@@ -1,0 +1,35 @@
+extends includes/layout.ignore.pug
+
+block content
+    //- BUTTONS 
+    +devider('BUTTONS')
+    .container
+        .container__row
+            .container__col-12
+                .container__row.container__row--justify-between
+                    +button('Normal buttossn',['button'])
+                    +button('Success button',['button','button--state-success'])
+                    //- // Better to add the text inside a span and move left instead of padding-right
+                    +button('Danger button',['button','button--state-danger'])
+    //- BUTTONS 
+    +devider('CARDS')
+
+    .container
+        .container__row.container__row--justify-center.container__row--margin-10
+            +custom_card('Web development',
+            'JavaScript Fundamentals',
+            '6/9 Questions','Operators',
+            'Name the following syntax "let objClone = { ...obj };"',
+            'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax',
+            'NEXT')
+        //- CARDS
+        .container__row
+            each classes, name in {'CARD 1': 'box box--style-1', 'CARD 2': 'box box--style-2', 'CARD 3': 'box box--style-1'}
+                .container__col-4.container__col-sm-12
+                    div&attributes({"class": classes})
+                        h2=name
+                        hr
+                        p
+                            | Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+                            | illo quas et est tenetur! Impedit placeat dolores aliquid quis
+                            | molestiae?

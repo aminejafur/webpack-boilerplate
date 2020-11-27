@@ -1,0 +1,8 @@
+nav.navbar
+  a.navbar__title(href='/') W-P-S
+  .navbar__mobile--icon |||
+  .navbar__menu
+    .navbar__menu--links-indicator
+    each val, key in {'/': 'Home', '/more.html': 'Services', '/contact': 'Contact'}
+      +add_link(key, val)(class="navbar__menu--links")
+    button.button.button--state-success PRESS ME

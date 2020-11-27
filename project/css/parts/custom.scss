@@ -1,0 +1,67 @@
+// custom card
+.custom__card {
+	background-color: #fff;
+	border: 1px solid #0f2c78;
+	display: flex;
+	overflow: hidden;
+	width: 100%;
+	h6 {
+		opacity: 0.6;
+		margin: 0;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+	}
+	h2 {
+		letter-spacing: 1px;
+		margin: 10px 0;
+	}
+	.custom__card-preview {
+		background-color: #0f2c78;
+		color: #fff;
+		padding: 30px;
+		max-width: 250px;
+	}
+	.custom__card-info {
+		padding: 30px;
+		position: relative;
+		width: 100%;
+		a {
+			color: #0f2c78;
+			text-decoration: none;
+		}
+		input {
+			display: block;
+			margin: 8px 0;
+			width: 30%;
+			height: 15%;
+			border: 1px solid #6d7171;
+		}
+	}
+	.progress-container {
+		top: 20px;
+		text-align: right;
+		width: 90%;
+		position: relative;
+	}
+	.progress {
+		background-color: #ddd;
+		border-radius: 3px;
+		height: 5px;
+		width: 100%;
+		&::after {
+			border-radius: 3px;
+			background-color: #9fa8c1;
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 5px;
+			width: 66%;
+		}
+	}
+	.progress-text {
+		font-size: 10px;
+		opacity: 0.8;
+		letter-spacing: 1px;
+	}
+}

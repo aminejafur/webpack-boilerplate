@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* design grid cols */
+
+.gif-background {
+  background: #fff url("../img/background.gif") no-repeat right top;
+  background-size: 70%;
+  background-repeat: no-repeat;
+}
+
+.grid [class*="container__col-"] {
+  width: 150px;
+  height: 30px;
+  background-color: #e6cd95;
+  outline: 1px solid #1342b8;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  user-select: none;
+}

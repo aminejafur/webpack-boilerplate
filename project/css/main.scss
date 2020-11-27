@@ -1,0 +1,70 @@
+$grid__cols: 12;
+$theme-1: (
+  body: (
+    bg: #fff,
+    fontfamily: monospace,
+    fontfallback: sans-serif,
+  ),
+  themeColors: (
+    maincolor: #1342b8,
+    light: #f7f7f7,
+    dark: #222121,
+    lime: #00cc66,
+    orangeRed: #fb4b4e,
+    blue: #2541b2,
+  ),
+  container: (
+    bg: #fff,
+    bp_md: 968,
+    color: #0f2c78,
+    border-color: #0f2c78,
+  ),
+  buttons: (
+    success: (
+      color: #fff,
+      bg: #0f2c78,
+      br: none,
+      br-color: #0f2c78,
+      br-radius: 5px,
+      bx-shadow: 0 5px #95a5a6,
+      hover-bg-color: #464952,
+      hover-bx-shadow: 0 2px #95a5a6,
+      transform: translateY(2px),
+    ),
+    danger: (
+      color: #fff,
+      bg: #900,
+      br-color: #997c3e,
+      br-radius: 5px,
+      hover-bg-color: #8b3c3c,
+      transform: scale(0.9),
+    ),
+  ),
+  boxes: (
+    style-1: (
+      bg: #e6cd95,
+      h2-size: 2rem,
+      h2-color: #0f2c78,
+      hr-color: black,
+      p-size: 1.2em,
+      p-color: #0f2c78,
+      hover-transform: scale(0.95),
+    ),
+    style-2: (
+      bg: #220d0d,
+      h2-size: 2rem,
+      h2-color: #fff,
+      hr-color: #fff,
+      p-size: 1.2em,
+      p-color: #fff,
+      hover-transform: scale(0.8),
+    ),
+  ),
+);
+
+@import "style.css";
+@import "parts/**/*";
+
+// theme_builder(themeName, themeMap)
+@include theme_builder(theme-1, $theme-1);
+// @include theme_builder(theme-2, $theme-2);

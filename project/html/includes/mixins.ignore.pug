@@ -1,0 +1,35 @@
+mixin add_link(href, name)
+  a(href=href)&attributes(attributes)= name
+
+mixin devider(text)
+  .container__row
+    .container__row.container__row--justify-center.container__row--margin-5
+      h2!=text
+
+mixin button(text, classes)
+  button&attributes({"class": `${classes.join(' ')}`})=`${text}`
+
+mixin custom_card(cat,name,progressText,title,question,solutionLink,button)
+  .custom__cards-container
+      .custom__card
+          .custom__card-preview
+              h6=cat
+              h2=name
+              .progress-container
+                  .progress
+                  span.progress-text=progressText
+          .custom__card-info
+              h6=title
+              h2=question
+              input(type='text' placeholder='Your answer here')
+              a(href=solutionLink target='_blank')
+                  | View solution
+              button.button.button--round.button--state-success(style='float: right')=button
+
+//- mixin grid_maker(text, repeat, number, rowClasses, colClasses)
+//-   - var n = 1;
+//-   - var rowAttr = {"class": `container__row ${!!rowClasses ? rowClasses.join(' ') : ''}`} 
+//-   div&attributes(rowAttr)
+//-     //- while n <= repeat
+//-   - var colAttr = {"class": `container__col-${number} ${colClasses.join(' ')}`}
+//-   div&attributes(colAttr)=`col-${number} ${text}`

@@ -1,0 +1,32 @@
+extends includes/layout.ignore.pug
+block content
+  //- this is just a comment to deleted in prod
+
+  //- Hero
+  //- CONTAINER
+  .container
+    .container__row
+      .container__col-6.container__col-sm-12.container__col--align-vertical.gif-background
+        h1 A minimal boilerplate using 
+        h4 Webpack + PUG.JS + SASS
+        p
+          | Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+          | quisquam aperiam quis ipsum provident fuga pariatur recusandae,
+          | consequuntur hic quibusdam, maiores, voluptatem voluptas praesentium
+          | corporis expedita a? Eos, a nulla?
+        .container__row.container__row--gap-5.container__row--margin-5
+          button#alert.button Loaded Alert
+          button#lazy_alert.button Lazy loaded alert
+      .grid.container__col-6.container__col--sm-hidden
+        .container__row.container__row--justify-center.container__row--border
+          .container__col-12.container__col-marin-0.container__col-offset-l-1.container__col-offset-r-1
+            | col-12 + margin-0 + offset-l-1 + offset-r-1
+          - var n = 0;
+            while n < 9
+              .container__row-element= `Row Element : ${++n}`
+  //- GRID 
+  +devider('GRID SYSTEM')
+  //- CONTAINER FLUID
+  include includes/grid.ignore.pug
+  //- MORE
+  +devider('AND <a href="more.html">MORE</a> !')

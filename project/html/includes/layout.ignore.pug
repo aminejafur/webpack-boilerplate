@@ -1,0 +1,14 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title webpack
+  body.theme-1
+    //- include header.ignore.pug //...
+    include mixins.ignore.pug
+    include nav.ignore.pug
+    section
+      article
+        block content
+    include footer.ignore.pug

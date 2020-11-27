@@ -1,0 +1,5 @@
+@mixin sm__devices {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
