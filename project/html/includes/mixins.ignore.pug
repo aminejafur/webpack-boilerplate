@@ -25,11 +25,3 @@ mixin custom_card(cat,name,progressText,title,question,solutionLink,button)
               a(href=solutionLink target='_blank')
                   | View solution
               button.button.button--round.button--state-success(style='float: right')=button
-
-//- mixin grid_maker(text, repeat, number, rowClasses, colClasses)
-//-   - var n = 1;
-//-   - var rowAttr = {"class": `container__row ${!!rowClasses ? rowClasses.join(' ') : ''}`} 
-//-   div&attributes(rowAttr)
-//-     //- while n <= repeat
-//-   - var colAttr = {"class": `container__col-${number} ${colClasses.join(' ')}`}
-//-   div&attributes(colAttr)=`col-${number} ${text}`
