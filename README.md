@@ -54,6 +54,7 @@ npm run build
 - [Sass](https://sass-lang.com/)
 - [PostCSS](https://postcss.org/)
 - [Autoprefixer](https://autoprefixer.github.io)
+- [BEM naming methodology](http://getbem.com)
 - Theme builder mixin demo at ['/css/parts/inc/mixins.scss'](https://raw.githubusercontent.com/aminejafur/webpack-boilerplate/main/project/css/parts/inc/mixins.scss)
 
 ```js
